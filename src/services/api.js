@@ -1,7 +1,7 @@
-import axios from 'axios';
+import ApolloClient from 'apollo-boost';
 
-const api = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL,
+const api = new ApolloClient({
+  uri: 'http://localhost:5000/',
 });
 
 export default api;
